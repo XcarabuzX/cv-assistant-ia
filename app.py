@@ -122,18 +122,22 @@ with st.sidebar:
             ),
         )
 
-    # Selector de modelo de Gemini disponible en el tier gratuito
+    # Selector de modelo de Gemini disponible en el tier gratuito.
+    # Nota: a partir de 2025 Google deprecó los nombres "gemini-1.5-*" y
+    # publicó nuevos alias estables ("gemini-flash-latest", "gemini-pro-latest")
+    # y versiones específicas ("gemini-2.0-flash", "gemini-2.5-flash").
     modelo = st.selectbox(
         "🤖 Modelo de IA",
         options=[
-            "gemini-1.5-flash",
-            "gemini-1.5-flash-8b",
-            "gemini-1.5-pro",
+            "gemini-flash-latest",
+            "gemini-2.0-flash",
+            "gemini-2.5-flash",
+            "gemini-pro-latest",
         ],
         index=0,
         help=(
-            "gemini-1.5-flash es el recomendado: rápido, gratuito y de "
-            "calidad alta para tareas de texto."
+            "gemini-flash-latest es el recomendado: alias que apunta "
+            "al último modelo Flash, rápido y gratuito en el tier free."
         ),
     )
 
