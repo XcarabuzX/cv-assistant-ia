@@ -1,0 +1,25 @@
+# API keys y secretos
+.streamlit/secrets.toml
+.streamlit/secrets.toml.example
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
